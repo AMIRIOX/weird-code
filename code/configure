@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Create AutoCompile.sh
+echo -e "#!/bin/bash" > ../AutoCompile.sh
+chmod 777 AutoCompile.sh
+
+# Many Langs
+while [ -n "${1}" ]; do
+# Follow These Rules:
+# 1. Compiler
+# 2. Files
+# 3. Command Lines
+    compiler="${1}"
+    shift 1 # It means right-move the Command Line.
+    files="${1}"
+    shift 1
+    commandline="${1}"
+    shift 1
+    for i in $files; do # Many Files
+    	echo "$compiler $commandline $i" >> ../AutoCompile.sh
+    done
+done;
