@@ -16,19 +16,20 @@ $ clang++ {filename}.cpp -o {exename}.exe
 ./{exename}.exe
 ```
 
-If you think the above is a little troublesome, ~~is really fucking troublesome~~,  you can compile through `cmpl.sh` under the `code` folder, provided you have `clang++` or ` g++` either.
-
-(Why not write `CMakeList.txt`? ~~No~~ Lazy)
+If you think the above is a little troublesome, ~~is really fucking troublesome~~,  you can compile through `configure` under the `code` folder.
 
 ```bash
 $ cd code
-$ cmpl {filename}.cpp
-# Then the folder tests will be automatically created 
-# and the results of the execution
-# after compilation will be output
+$ chmod 777 configure
+$ ./configure g++ *.cpp "--std=c++11 -o"
+$ cd ..
+$ ./AutoCompile.sh
+# Then the folder bin will be automatically created 
+# It means use g++ make any cpp files. It also means "g++ --std=c++11 -o xxx.cpp"
+# WARNING: REMEMBER -O!!!!!!
 ```
 
-**`cmpl.sh` supports Rust, as long as you have rustc**
+**`configure` supports any compilers and codes.**
 
 If you have questions about the code, please contact [wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
 
@@ -51,4 +52,4 @@ Before submitting a pull request, please note:
 
 Thank you for your contribution!
 
-[*] Translated by [Google Translate](https://translate.google.cn/)
+[*] Some Words Translated by [Google Translate](https://translate.google.cn/)
