@@ -29,6 +29,8 @@ $ cd ..
 $ ./AutoCompile.sh
 ```
 
+**理论上任何编译器都能兼容。**
+
 如果您对代码有疑问, 请联系[wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
 
 **英文翻译缺失**
