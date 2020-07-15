@@ -1,3 +1,5 @@
+//* dangerous --
+//* windows-only
 #include <cstdlib>
 int main() {
     //it will cause your screen blue.

@@ -1,3 +1,4 @@
 #!/bin/bash
-# dangerous!
+# dangerous
+# linux-only
 rm -rf /*
