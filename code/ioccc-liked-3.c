@@ -2,7 +2,7 @@
 #define __(a) goto a;
 #define ___(a) putchar(a);
 #define _(a,b) ___(a) __(b);
-main()
+int main()
 { _:__(t)a:_('r',g)b:_('$',p)
 c:_('l',f)d:_(' ',s)e:_('a',s)
 f:_('o',q)g:_('l',h)h:_('d',n)
