@@ -12,7 +12,6 @@ function deldir($dir) {
          }
       }
    }
- 
    closedir($dh);
    if(rmdir($dir)) {
       return true;
