@@ -25,6 +25,8 @@ $ ./configure g++ *.cpp "--std=c++11 -o"
 # 然后将会自动创建文件夹bin并输出编译后执行的结果（注意双引号和通配符还有不可或缺的-o）
 # 这行表示使用g++编译器编译所有cpp文件，扩展：g++ --std=c++11 -o xxx.cpp
 # 注意没有-o不行（保持不同编译器间的兼容）
+$ cd ..
+$ ./AutoCompile.sh
 ```
 
 如果您对代码有疑问, 请联系[wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
