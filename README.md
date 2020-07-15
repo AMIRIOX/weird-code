@@ -16,7 +16,7 @@ $ clang++ {filename}.cpp -o {exename}.exe
 ./{exename}.exe
 ```
 
-如果您觉得上面的~~玩意~~有些麻烦, ~~确实很他妈麻烦~~,您可以通过`code`文件夹下的`cmpl.sh`进行编译,前提是您具有`clang++`或`g++`二者之一
+如果您觉得上面的~~玩意~~有些麻烦, ~~确实很他妈麻烦~~,您可以通过`code`文件夹下的`cmpl.sh`进行编译,前提是您具有`clang++`或`g++`二者之一(为什么不写`CMakeList.txt`? ~~不会~~ 懒)
 
 ```bash
 $ cd code

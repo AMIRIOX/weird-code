@@ -16,7 +16,9 @@ $ clang++ {filename}.cpp -o {exename}.exe
 ./{exename}.exe
 ```
 
-If you think the above is a little troublesome, ~~ is really fucking troublesome~~, you can compile through `cmpl.sh` under the `code` folder, provided you have `clang++` or ` g++` either.
+If you think the above is a little troublesome, ~~is really fucking troublesome~~,  you can compile through `cmpl.sh` under the `code` folder, provided you have `clang++` or ` g++` either.
+
+(Why not write `CMakeList.txt`? ~~No~~ Lazy)
 
 ```bash
 $ cd code
