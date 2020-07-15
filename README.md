@@ -6,7 +6,7 @@
 
 ## 测试代码
 
-一切代码在`clang++ 10.0.0`下测试, 
+未注明测试环境的代码默认在`clang++ 10.0.0`下测试.
 
 ```bash
 $ clang++ {filename}.cpp -o {exename}.exe
