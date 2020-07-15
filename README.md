@@ -16,17 +16,20 @@ $ clang++ {filename}.cpp -o {exename}.exe
 ./{exename}.exe
 ```
 
-如果您觉得上面的~~玩意~~有些麻烦, ~~确实很他妈麻烦~~,您可以通过`code`文件夹下的`cmpl.sh`进行编译,前提是您具有`clang++`或`g++`二者之一(为什么不写`CMakeList.txt`? ~~不会~~ 懒)
+如果您觉得上面的~~玩意~~有些麻烦, ~~确实很他妈麻烦~~,您可以通过`code`文件夹下的`configure`文件进行编译。
 
 ```bash
 $ cd code
-$ cmpl {filename}.cpp
-# 然后将会自动创建文件夹tests并输出编译后执行的结果
+$ chmod 777 configure
+$ ./configure g++ *.cpp "--std=c++11 -o"
+# 然后将会自动创建文件夹bin并输出编译后执行的结果（注意双引号和通配符还有不可或缺的-o）
+# 这行表示使用g++编译器编译所有cpp文件，扩展：g++ --std=c++11 -o xxx.cpp
+# 注意没有-o不行（保持不同编译器间的兼容）
 ```
 
-**`cmpl.sh`支持Rust,只要您有rustc**
-
 如果您对代码有疑问, 请联系[wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
+
+**英文翻译缺失**
 
 ## 为本仓库提交pull request
 
