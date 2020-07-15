@@ -28,6 +28,8 @@ $ cmpl {filename}.cpp
 # after compilation will be output
 ```
 
+**`cmpl.sh` supports Rust, as long as you have rustc**
+
 If you have questions about the code, please contact [wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
 
 You are welcome to fork this warehouse and submit a pull request,You can submit "standard undefined `UB` but **interesting** code" or "spoof code" for this repository.

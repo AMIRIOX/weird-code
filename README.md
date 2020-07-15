@@ -24,6 +24,8 @@ $ cmpl {filename}.cpp
 # 然后将会自动创建文件夹tests并输出编译后执行的结果
 ```
 
+**`cmpl.sh`支持Rust,只要您有rustc**
+
 如果您对代码有疑问, 请联系[wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
 
 ## 为本仓库提交pull request
