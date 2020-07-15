@@ -26,7 +26,8 @@ $ cmpl {filename}.cpp
 
 If you have questions about the code, please contact [wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
 
-You are welcome to fork this warehouse and submit a pull request!
+You are welcome to fork this warehouse and submit a pull request,You can submit "standard undefined `UB` but **interesting** code" or "spoof code" for this repository.
+Languages include but not limited to rust, C++, C, Python, Shell.
 
 Thank you for your contribution!
 

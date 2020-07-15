@@ -24,6 +24,7 @@ $ cmpl {filename}.cpp
 
 如果您对代码有疑问, 请联系[wumingyun2120@outlook.com](mailto:wumingyun2120@outlook.com)
 
-欢迎您fork本仓库并提交pull request!
+欢迎您fork本仓库并提交pull request, 您可以为本仓库提交"标准未定义的`UB`但是**很有趣**的代码"或"恶搞的代码"
+语言包括但不限于rust, C++, C, Python, Shell.
 
 感谢您的贡献!
