@@ -4,7 +4,12 @@
 echo -e "#!/bin/bash" > ../AutoCompile.sh
 chmod 777 AutoCompile.sh
 
-# Many Langs
+# Check Command Lines
+if [ `expr $# % 3` -ne 1 ]; then
+    echo "Usage Error!" >&2
+fi
+
+# Many Langs and Compilers
 while [ -n "${1}" ]; do
 # Follow These Rules:
 # 1. Compiler
