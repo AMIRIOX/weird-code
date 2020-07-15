@@ -1,2 +1,6 @@
+//By: Luogu@wangdemao(308854)
 #include <stdlib.h>
-main(){system("start");main();}
+int main() {
+	system("start");
+	main();
+}
