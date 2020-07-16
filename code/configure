@@ -22,6 +22,6 @@ while [ -n "${1}" ]; do
     commandline="${1}"
     shift 1 # Me too too.
     for i in $files; do # Many Files
-    	echo "$compiler $i $commandline ../bin/$i" >> ../AutoCompile.sh
+    	echo '$compiler $i $commandline ../bin/$i || { echo "Error: Compile Error. If you sure your selected file is right, Give us a issue at https://github.com/AMIRIOX/weird-code." >&2;exit 127 }' >> ../AutoCompile.sh
     done
 done;
