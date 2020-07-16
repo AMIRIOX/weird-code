@@ -18,10 +18,10 @@ while [ -n "${1}" ]; do
     compiler="${1}"
     shift 1 # It means right-move the Command Line.
     files="${1}"
-    shift 1
+    shift 1 # Me too.
     commandline="${1}"
-    shift 1
+    shift 1 # Me too too.
     for i in $files; do # Many Files
-    	echo "$compiler $commandline $i" >> ../AutoCompile.sh
+    	echo "$compiler $i $commandline ../bin/$i" >> ../AutoCompile.sh
     done
 done;
