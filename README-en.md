@@ -20,13 +20,18 @@ If you think the above is a little troublesome, ~~is really fucking troublesome~
 
 ```bash
 $ cd code
-$ chmod 777 configure
-$ ./configure g++ *.cpp "--std=c++11 -o"
-$ cd ..
-$ ./AutoCompile.sh
+$ g++ configure.cpp -std=c++11 -o configure
+$ ./configure g++ *.cpp "-std=c++11 -o"
 # Then the folder bin will be automatically created 
 # It means use g++ make any cpp files. It also means "g++ --std=c++11 -o xxx.cpp"
 # WARNING: REMEMBER -O!!!!!!
+# But you can also use these to compile the programs.
+$ ./configure < windows.list
+$ ./configure < linux.list
+$ ./configure < compatible.list
+# Run this when configure script is ready.
+$ ../AutoCompile.bat (Windows)
+$ ../AutoCompile.sh (Linux)
 ```
 
 **`configure` supports any compilers and codes.**

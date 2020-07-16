@@ -19,13 +19,17 @@ $ clang++ {filename}.cpp -o {exename}.exe
 
 ```bash
 $ cd code
-$ chmod 777 configure
-$ ./configure g++ *.cpp "--std=c++11 -o"
-$ cd ..
-$ ./AutoCompile.sh
+$ g++ configure.cpp -o configure
+$ ./configure g++ *.cpp -std=c++11 -o
 # 然后将会自动创建文件夹bin并输出编译后执行的结果（注意双引号和通配符还有不可或缺的-o）
 # 这行表示使用g++编译器编译所有cpp文件，扩展：g++ --std=c++11 -o xxx.cpp
 # 注意没有-o不行（保持不同编译器间的兼容）
+# 可以使用默认的文件进行快速编译：
+$ ./configure < windows.list
+$ ./configure < linux.list
+$ ./configure < compatible.list
+$ ../AutoCompile.bat (Windows)
+$ ../AutoCompile.sh (Linux)
 ```
 
 **理论上任何编译器都能兼容。**

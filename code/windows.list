@@ -1,0 +1,5 @@
+g++ agame.cpp "-o"
+g++ bluescreen.cpp "-std=c++11 -o"
+g++ fullscreen-die.cpp "-std=c++11 -o"
+g++ Pop-ups.cpp "-std=c++11 -o"
+g++ screen-killer.cpp "-std=c++11 -o"
