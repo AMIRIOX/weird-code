@@ -9,17 +9,19 @@ int main(int argc,char** argv){
     ofstream autocompile("../AutoCompile.bat");
     autocompile<<"@echo off"<<endl<<"rem Configure Script: Hello world!"<<endl;
 #endif
+    ofstream listFile;
+    bool flag=false;
     if(!strcmp(argv[1],"auto")){
         if(!strcmp(argv[2],"windows")){
-            ofstream listFile("windows.list");
+            listFile.open("windows.list");
         }
         else if(!strcmp(argv[3],"linux")){
-            ofstream listFile("linux.list");
+            listFile.open("linux.list");
         }
         else{
-            ofstream listFile("compatible.list");
+            listFile.open("compatible.list");
         }
-        bool flag=true;
+        flag=true;
     }
     for(int i=1;i<argc;i+=3){
         string compiler=argv[i];
