@@ -20,15 +20,16 @@ If you think the above is a little troublesome, ~~is really fucking troublesome~
 
 ```bash
 $ cd code
-$ g++ configure.cpp -std=c++11 -o configure
+$ g++ configure.cpp -std=c++11 -o configure (Linux)
+$ g++ configure.cpp -std=c++11 -o configure.exe (Windows)
 $ ./configure g++ *.cpp "-std=c++11 -o"
 # Then the folder bin will be automatically created 
 # It means use g++ make any cpp files. It also means "g++ --std=c++11 -o xxx.cpp"
 # WARNING: REMEMBER -O!!!!!!
 # But you can also use these to compile the programs.
-$ ./configure < windows.list
-$ ./configure < linux.list
-$ ./configure < compatible.list
+$ ./configure auto windows g++(any compiler you like) "-std=c++11 -o"(any args you like)
+$ ./configure auto linux g++(any compiler you like) "-std=c++11 -o"(any args you like)
+$ ./configure auto compatible g++(any compiler you like) "-std=c++11 -o"(any args you like)
 # Run this when configure script is ready.
 $ ../AutoCompile.bat (Windows)
 $ ../AutoCompile.sh (Linux)
