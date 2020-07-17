@@ -1,5 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+void outputSource(ofstream& autocompile,string filename,string compiler,string commandline) {
+#ifdef linux
+    autocompile << "# Configure Script: Outputing the source code: " << filename << endl;
+    autocompile << compiler << " " << filename << " " << commandline << " ../bin/" << filename << " || { echo \"Compile Error! Please go to github and submit a issue.\";exit $? }" << endl;
+#else
+    autocompile << "rem Configure Script: Outputing the source code: " << filename << endl;
+    autocompile << compiler << " " << filename << " " << commandline << " ../bin/" << filename << " || { echo \"Compile Error! Please go to github and submit a issue.\";exit %errorlevel% }" << endl;
+#endif
+}
 int main(int argc,char** argv){
 #ifdef linux
     ofstream autocompile("../AutoCompile.sh ");
@@ -10,16 +19,29 @@ int main(int argc,char** argv){
     autocompile<<"@echo off"<<endl<<"rem Configure Script: Hello world!"<<endl;
 #endif
     ifstream listFile;
-    bool flag=false;
+    bool flag = false,comflag=false;
+    vector<string> files;
     if(!strcmp(argv[1],"auto")){
         if(!strcmp(argv[2],"windows")){
             listFile.open("windows.list");
         }
-        else if(!strcmp(argv[3],"linux")){
+        else if(!strcmp(argv[2],"linux")){
             listFile.open("linux.list");
         }
-        else{
+        else if (!strcmp(argv[2], "ioccc")) {
+#ifdef linux
+            system("find . -name \" * .c\" > IOCCC.list");
+#else
+            system("for /r IOCCC %i in (*.c) do @echo %i >> IOCCC.list")
+#endif
+            listFile.open("IOCCC.list");
+        }
+        else if(!strcmp(argv[2],"compatible")){
             listFile.open("compatible.list");
+            comflag = true;
+        }
+        else {
+            return;
         }
         flag=true;
     }
@@ -31,21 +53,11 @@ int main(int argc,char** argv){
         if(flag==false){
             string files=argv[i+1];
             while(sscanf(files.c_str(),"%s",&stri[0])!=0){
-#ifdef linux
-                autocompile<<"# Configure Script: Outputing the source code: "<<stri<<endl;
-#else
-                autocompile<<"rem Configure Script: Outputing the source code: "<<stri<<endl;
-#endif
-                autocompile<<compiler<<" "<<stri<<" "<<commandline<<" ../bin/"<<stri<<" || { echo \"Compile Error! Please go to github and submit a issue.\";exit $? }"<<endl;
+                outputSource(autocompile, stri,compiler,commandline);
             }
         }else{
             while(listFile>>stri){
-#ifdef linux
-                autocompile<<"# Configure Script: Outputing the source code: "<<i<<endl;
-#else
-                autocompile<<"rem Configure Script: Outputing the source code: "<<i<<endl;
-#endif
-                autocompile<<compiler<<" "<<stri<<" "<<commandline<<" ../bin/"<<stri<<" || { echo \"Compile Error! Please go to github and submit a issue.\";exit $? }"<<endl;
+                outputSource(autocompile, stri, compiler, commandline);
             }
         }
     }

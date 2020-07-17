@@ -29,6 +29,7 @@ $ ./configure g++ *.cpp "-std=c++11 -o"
 $ ./configure auto windows g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
 $ ./configure auto linux g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
 $ ./configure auto compatible g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
+$ ./configure auto ioccc g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
 $ ../AutoCompile.bat (Windows)
 $ ../AutoCompile.sh (Linux)
 ```
