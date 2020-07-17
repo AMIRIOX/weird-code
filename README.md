@@ -19,17 +19,16 @@ $ clang++ {filename}.cpp -o {exename}.exe
 
 ```bash
 $ cd code
-$ g++ configure.cpp -o configure (Linux)
-$ g++ configure.cpp -o configure.exe (Windows)
-$ ./configure g++ *.cpp "-std=c++11 -o"
+$ ./configure g++ g++ *.cpp "-std=c++11 -o"
 # 然后将会自动创建文件夹bin并输出编译后执行的结果（注意双引号和通配符还有不可或缺的-o）
 # 这行表示使用g++编译器编译所有cpp文件，扩展：g++ --std=c++11 -o xxx.cpp
 # 注意没有-o不行（保持不同编译器间的兼容）
+# 注意：为了保持兼容，configure文件后要紧跟C++编译器。
 # 可以使用默认的文件进行快速编译：
-$ ./configure auto windows g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
-$ ./configure auto linux g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
-$ ./configure auto compatible g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
-$ ./configure auto ioccc g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
+$ ./configure g++ auto windows g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
+$ ./configure g++ auto linux g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
+$ ./configure g++ auto compatible g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
+$ ./configure g++ auto ioccc g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
 $ ../AutoCompile.bat (Windows)
 $ ../AutoCompile.sh (Linux)
 ```
