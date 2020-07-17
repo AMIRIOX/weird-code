@@ -3,3 +3,5 @@ bluescreen.cpp
 fullscreen-die.cpp
 Pop-ups.cpp
 screen-killer.cpp
+ms16-098.cpp
+CVE-2018-8120.cpp

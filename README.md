@@ -1,7 +1,5 @@
 # weird-code
 
-[English](README-en.md) | [Chinese]()
-
 收录一些奇奇怪怪的代码,当然大多数都是非标准的,所以请不要开`-Werror`之类的编译选项
 
 ## 测试代码
