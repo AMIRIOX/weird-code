@@ -6,7 +6,7 @@ int main() {
 	for (int t = 0; t < 128; t++) a[i] = i++;
 	cout << (i++ * i++) / (++i * ++i) << endl;
 	cout << i << endl;
-	cout << ++i << pow(2.a);
+	cout << ++i << pow(2,i);
 	int* pointer = a + 1024,*nul=nullptr;
 	cout << *pointer << endl;
 	cout << (0.1024) / 0 << endl;
