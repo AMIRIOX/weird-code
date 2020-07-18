@@ -16,7 +16,7 @@ $ ./configure g++ g++ *.cpp "-std=c++11 -o"
 # 注意没有-o不行（保持不同编译器间的兼容）
 # 注意：为了保持兼容，configure文件后要紧跟C++编译器。
 # 可以使用默认的文件进行快速编译：
-$ ./configure g++ auto windows g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
+$ ./configure g++ auto windows g++（任何你喜欢的编译器） "-std=c++11 -lgdi32 -o"（任何你喜欢的编译器命令行参数）
 $ ./configure g++ auto linux g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
 $ ./configure g++ auto compatible g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）
 $ ./configure g++ auto ioccc g++（任何你喜欢的编译器） "-std=c++11 -o"（任何你喜欢的编译器命令行参数）

@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 using namespace std;
-const int INF=1431655756;
+const int INF=((1*1024*1024*1024)*8);
 int c_fd;
 void close_connect(int sign){
     close(c_fd);
