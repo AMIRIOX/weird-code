@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ ! -e configure_temp ]; then
-    $1 configure.cpp -o configure_temp
-fi
-chmod 777 configure_temp
-shift 2
-configure_temp $*

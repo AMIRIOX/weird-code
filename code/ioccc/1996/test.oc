@@ -1,1 +1,0 @@
-main() { putchar('!'); putchar('\n'); exit(0); }
