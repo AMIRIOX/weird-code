@@ -16,7 +16,7 @@ $ ./configure.sh
 $ cd ../bin
 ```
 
-**目前只能兼容C,C++,asm,bash,batch,Python**
+**目前只能兼容C,C++,asm,bash,batch,Python,C#**
 
 有些只能在Windows或Linux环境下运行，所以出错正常。
 
